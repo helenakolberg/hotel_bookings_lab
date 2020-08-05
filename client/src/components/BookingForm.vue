@@ -4,15 +4,15 @@
           <h3>Add a new booking:</h3>
           <div class="form-item">
             <label for="firstName">First Name:</label>
-            <input type="text" name="firstName" id="first-name" v-model="firstName" required/>
+            <input type="text" name="firstName" id="first-name" v-model="firstName" />
           </div>
         <div class="form-item">
             <label for="surname">Surname:</label>
-            <input type="text" name="surname" id="surname" v-model="surname" required/>
+            <input type="text" name="surname" id="surname" v-model="surname" />
         </div>
         <div class="form-item">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" v-model="email" required/>
+            <input type="text" name="email" id="email" v-model="email" />
         </div>
         <div class="form-item">
             <input type="submit" value="Submit" id="submit" class="btn"/>
