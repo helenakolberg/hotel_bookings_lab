@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000/api/bookings'
+const baseURL = 'http://localhost:3000/api/bookings/'
 
 export default {
 
@@ -18,7 +18,7 @@ export default {
     deleteBooking(id) {
         return fetch(baseURL + id, {
             method: 'DELETE'
-        });
+        })
     }
 
 }

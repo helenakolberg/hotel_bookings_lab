@@ -1,6 +1,6 @@
 <template>
   <div>
-      <booking-detail v-for="booking in bookings" :booking="booking" :key="booking._id"/>
+    <booking-detail v-for="booking in bookings" :booking="booking" :key="booking._id"/>
   </div>
 </template>
 
