@@ -1,16 +1,19 @@
 <template>
   <div>
-      Hello
+      <booking-detail v-for="booking in bookings" :booking="booking" :key="booking._id"/>
   </div>
 </template>
 
 <script>
 import { eventBus } from '@/main.js';
-// import BookingDetail from './components/BookingDetail.vue';
+import BookingDetail from './BookingDetail.vue';
 
 export default {
     name: 'booking-list',
-    props: ['bookings']
+    props: ['bookings'],
+    components: {
+        'booking-detail': BookingDetail
+    }
 }
 </script>
 
