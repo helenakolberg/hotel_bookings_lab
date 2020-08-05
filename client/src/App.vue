@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
+    <h1>Booking Manager</h1>
     <booking-form />
+    <h2>All Bookings:</h2>
     <booking-list :bookings="bookings" />
   </div>
 </template>
@@ -43,5 +45,24 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: lightblue;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.btn {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: mediumblue;
+  cursor: pointer;
+}
 
 </style>

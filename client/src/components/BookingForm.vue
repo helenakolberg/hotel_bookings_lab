@@ -2,16 +2,16 @@
   <div>
       <form id="booking-form" v-on:submit.prevent="handleSubmit" method="post">
           <h3>Add a new booking:</h3>
-          <div>
+          <div class="form-item">
             <label for="fullName">Full Name:</label>
             <input type="text" name="fullName" id="full-name" v-model="fullName" required/>
           </div>
-        <div>
+        <div class="form-item">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" v-model="email" required/>
         </div>
-        <div>
-            <input type="submit" value="Submit" id="submit"/>
+        <div class="form-item">
+            <input type="submit" value="Submit" id="submit" class="btn"/>
         </div>
       </form>
   </div>
@@ -43,6 +43,21 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+#booking-form {
+    border: 2px solid darkblue;
+    padding: 0px 30px 15px 30px;
+    margin-bottom: 40px;
+    width: 250px;
+    background-color: white;
+}
+
+.form-item {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
 
 </style>
