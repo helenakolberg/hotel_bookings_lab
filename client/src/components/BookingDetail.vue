@@ -1,6 +1,11 @@
 <template>
   <div>
-      Booking detail
+      <div>{{ booking.fullName }}</div>
+      <div>|</div>
+      <div>{{ booking.email }} </div>
+      <div>|</div>
+      <div v-if="booking.checkedIn === false">Not checked in</div>
+       <div v-if="booking.checkedIn === true">Checked in</div>
   </div>
 </template>
 
