@@ -65,4 +65,12 @@ body {
   cursor: pointer;
 }
 
+button {
+  outline: none;
+}
+
+#submit {
+  outline: none;
+}
+
 </style>

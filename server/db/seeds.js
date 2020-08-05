@@ -3,17 +3,20 @@ db.dropDatabase();
 
 db.bookings.insertMany([
     {
-        fullName: "Ruben Botha",
+        firstName: "Ruben",
+        surname: "Botha",
         email: "r.botha@gmail.com",
         checkedIn: false
     },
     {
-        fullName: "Rebeka Geczi",
+        firstName: "Rebeka",
+        surname: "Geczi",
         email: "Rebeka@yahoo.com",
         checkedIn: true
     },
     {
-        fullName: "Robert Peacock",
+        firstName: "Robert",
+        surname: "Peacock",
         email: "r.p@gmail.com",
         checkedIn: false
     }

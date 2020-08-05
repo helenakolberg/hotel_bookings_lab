@@ -3,9 +3,13 @@
       <form id="booking-form" v-on:submit.prevent="handleSubmit" method="post">
           <h3>Add a new booking:</h3>
           <div class="form-item">
-            <label for="fullName">Full Name:</label>
-            <input type="text" name="fullName" id="full-name" v-model="fullName" required/>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="first-name" v-model="firstName" required/>
           </div>
+        <div class="form-item">
+            <label for="surname">Surname:</label>
+            <input type="text" name="surname" id="surname" v-model="surname" required/>
+        </div>
         <div class="form-item">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" v-model="email" required/>
@@ -24,7 +28,8 @@ export default {
     name: 'booking-form',
     data() {
         return {
-            fullName: '',
+            firstName: '',
+            surname: '',
             email: '',
             checkedIn: false
         }
@@ -32,12 +37,16 @@ export default {
     methods: {
         handleSubmit(e) {
             const booking = {
-                fullName: this.fullName,
+                firstName: this.firstName,
+                surname: this.surname,
                 email: this.email,
                 checkedIn: this.checkedIn
             }
             BookingService.postBooking(booking)
-            .then( res => eventBus.$emit('new-booking', res))
+            .then( res => eventBus.$emit('new-booking', res));
+            this.firstName = '';
+            this.surname = '';
+            this.email = '';
         }
     }
 }

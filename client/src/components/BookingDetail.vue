@@ -1,6 +1,6 @@
 <template>
   <div class="detail-wrapper">
-      <div class="detail-item">{{ booking.fullName }}</div>
+      <div class="detail-item">{{ booking.firstName }} {{ booking.surname }}</div>
       <div class="detail-item">|</div>
       <div class="detail-item">{{ booking.email }} </div>
       <div class="detail-item">|</div>

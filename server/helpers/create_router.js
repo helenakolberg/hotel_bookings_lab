@@ -30,7 +30,7 @@ const createRouter = function(collection) {
     });
 
     router.post('/', (req,res) => {
-        if (req.body.fullName === '' || req.body.email === '') {
+        if (req.body.firstName === '' || req.body.surname === '' || req.body.email === '') {
             return
         }
         const newData = req.body;
